@@ -1,11 +1,6 @@
 Project Altis, based on AsYetUntitled, formerly <b>Altis Life RPG</b> and <b>ARMARPGLIFE</b>
 
-Modified by:
-
--<b>TaktischerSpeck aka Vincent Buß</b>
--<b>Bobby K</b>
-
-This Github is not currently associated with any forums.
+Modified by: <b>TaktischerSpeck aka Vincent Buß and <b>Bobby K</b>
 
 # License: 
 Altis Life RPG by AsYetUntitled is licensed under a [Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License](http://creativecommons.org/licenses/by-nc-nd/4.0/deed.en_US)
