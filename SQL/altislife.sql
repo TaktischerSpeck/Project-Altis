@@ -15,6 +15,11 @@ SET time_zone = "+00:00";
 -- Creates database `altislife` unless it already exists and uses `altislife`
 -- Default Schema
 --
+
+CREATE USER IF NOT EXISTS `altislifeUser`@`localhost` IDENTIFIED WITH mysql_native_password BY 'UnterdrückungsstaatGoldfischglas';
+GRANT SELECT, UPDATE, INSERT, DELETE, EXECUTE ON `altislife`.* TO 'altislifeUser'@'localhost';
+FLUSH PRIVILEGES;
+
 CREATE DATABASE IF NOT EXISTS `altislife` DEFAULT CHARACTER SET utf8mb4;
 USE `altislife`;
 
@@ -99,7 +104,7 @@ CREATE TABLE IF NOT EXISTS `players` (
     `playtime`     VARCHAR(32) NOT NULL DEFAULT '"[0,0,0]"',
     `insert_time`  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     `last_seen`    TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    
+
     PRIMARY KEY (`pid`),
     UNIQUE KEY `unique_uid` (`uid`),
     INDEX `index_name` (`name`),
@@ -128,7 +133,7 @@ CREATE TABLE IF NOT EXISTS `vehicles` (
     `fuel`        DOUBLE NOT NULL DEFAULT 1,
     `damage`      VARCHAR(256) NOT NULL,
     `insert_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    
+
     PRIMARY KEY (`id`),
     INDEX `fkIdx_players_vehicles` (`pid`),
     CONSTRAINT `FK_players_vehicles` FOREIGN KEY `fkIdx_players_vehicles` (`pid`)
@@ -152,7 +157,7 @@ CREATE TABLE IF NOT EXISTS `houses` (
     `owned`       TINYINT DEFAULT 0,
     `garage`      TINYINT NOT NULL DEFAULT 0,
     `insert_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    
+
     PRIMARY KEY (`id`),
     INDEX `fkIdx_players_houses` (`pid`),
     CONSTRAINT `FK_players_houses` FOREIGN KEY `fkIdx_players_houses` (`pid`)
@@ -176,7 +181,7 @@ CREATE TABLE IF NOT EXISTS `gangs` (
     `bank`        INT DEFAULT 0,
     `active`      TINYINT NOT NULL DEFAULT 1,
     `insert_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    
+
     PRIMARY KEY (`id`),
     UNIQUE KEY `unique_name` (`name`),
     INDEX `fkIdx_players_gangs` (`owner`),
@@ -203,7 +208,7 @@ CREATE TABLE IF NOT EXISTS `containers` (
     `active`      TINYINT NOT NULL DEFAULT 0,
     `owned`       TINYINT NOT NULL DEFAULT 0,
     `insert_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    
+
     PRIMARY KEY (`id`),
     INDEX `fkIdx_players_containers` (`pid`),
     CONSTRAINT `FK_players_containers` FOREIGN KEY `fkIdx_players_containers` (`pid`)
@@ -225,7 +230,7 @@ CREATE TABLE IF NOT EXISTS `wanted` (
     `wantedBounty` INT NOT NULL,
     `active`       TINYINT NOT NULL DEFAULT 0,
     `insert_time`  TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    
+
     PRIMARY KEY (`wantedID`),
     CONSTRAINT `FK_players_wanted` FOREIGN KEY `fkIdx_players_wanted` (`wantedID`)
       REFERENCES `players` (`pid`)
