@@ -1,7 +1,9 @@
 Project Altis, based on AsYetUntitled, formerly <b>Altis Life RPG</b> and <b>ARMARPGLIFE</b>
+
 Modified by:
--<b>TaktischerSpeck aka Vincent Buß</b>.
--<b>Bobby K</b>.
+
+-<b>TaktischerSpeck aka Vincent Buß</b>
+-<b>Bobby K</b>
 
 This Github is not currently associated with any forums.
 
