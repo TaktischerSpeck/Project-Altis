@@ -371,4 +371,10 @@ class Life_Client_Core {
         class vehTakeItem {};
         class vInteractionMenu {};
     };
+
+    class Tuning {
+		file = "core\tuning";
+        class gloves {};
+        class foundsomething {};
+	};
 };
