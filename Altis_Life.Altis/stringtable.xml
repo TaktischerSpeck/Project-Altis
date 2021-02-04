@@ -339,6 +339,9 @@
             <Polish>Caffe OLLEN</Polish>
 			<Chinesesimp>加油站咖啡店</Chinesesimp>
         </Key>
+        <Key ID="STR_Shops_Glass">
+            <Original>Glashändler</Original>
+        </Key>
     </Package>
     <Package name="Global">
         <Key ID="STR_Global_Close">
@@ -13389,6 +13392,121 @@
             <Russian>%1 - %2 депозит в размере $%3 в свой банк. Банковский баланс: $%4 на руку Баланс: $%5</Russian>
             <German>%1 - %2 hat $%3 auf sein Bankkonto eingezahlt. Bankkonto: $%4  Bargeld: $%5</German>
 			<Chinesesimp>%1 - %2 将 $%3 存进他们的银行账户。银行存款余额：$%4  手上现金：$%5</Chinesesimp>
+        </Key>
+    </Package>
+    <Package name="TaktischesTuning">
+        <Key ID="STR_Item_part_T1">
+			<Original>Tier 1 Bauteil</Original>
+		</Key>
+        <Key ID="STR_Item_part_T2">
+			<Original>Tier 2 Bauteil</Original>
+		</Key>
+        <Key ID="STR_Item_part_T3">
+			<Original>Tier 3 Bauteil</Original>
+		</Key>
+        <Key ID="STR_Item_part_T4">
+			<Original>Tier 4 Bauteil</Original>
+		</Key>
+        <Key ID="STR_Item_part_T5">
+			<Original>Tier 5 Bauteil</Original>
+		</Key>
+
+        <Key ID="STR_Item_engine_T1">
+			<Original>Tier 1 Motor</Original>
+		</Key>
+        <Key ID="STR_Item_engine_T2">
+			<Original>Tier 2 Motor</Original>
+		</Key>
+        <Key ID="STR_Item_engine_T3">
+			<Original>Tier 3 Motor</Original>
+		</Key>
+        <Key ID="STR_Item_engine_T4">
+			<Original>Tier 4 Motor</Original>
+		</Key>
+        <Key ID="STR_Item_engine_T5">
+			<Original>Tier 5 Motor</Original>
+		</Key>
+
+        <Key ID="STR_Item_transmission_T1">
+			<Original>Tier 1 Getriebe</Original>
+		</Key>
+        <Key ID="STR_Item_transmission_T2">
+			<Original>Tier 2 Getriebe</Original>
+		</Key>
+        <Key ID="STR_Item_transmission_T3">
+			<Original>Tier 3 Getriebe</Original>
+		</Key>
+        <Key ID="STR_Item_transmission_T4">
+			<Original>Tier 4 Getriebe</Original>
+		</Key>
+        <Key ID="STR_Item_transmission_T5">
+			<Original>Tier 5 Getriebe</Original>
+		</Key>
+
+        <Key ID="STR_Item_brakes_T1">
+			<Original>Tier 1 Bremsen</Original>
+		</Key>
+        <Key ID="STR_Item_brakes_T2">
+			<Original>Tier 2 Bremsen</Original>
+		</Key>
+        <Key ID="STR_Item_brakes_T3">
+			<Original>Tier 3 Bremsen</Original>
+		</Key>
+        <Key ID="STR_Item_brakes_T4">
+			<Original>Tier 4 Bremsen</Original>
+		</Key>
+        <Key ID="STR_Item_brakes_T5">
+			<Original>Tier 5 Bremsen</Original>
+		</Key>
+
+        <Key ID="STR_Item_suspension_T1">
+			<Original>Tier 1 Radaufhängung</Original>
+		</Key>
+        <Key ID="STR_Item_suspension_T2">
+			<Original>Tier 2 Radaufhängung</Original>
+		</Key>
+        <Key ID="STR_Item_suspension_T3">
+			<Original>Tier 3 Radaufhängung</Original>
+		</Key>
+        <Key ID="STR_Item_suspension_T4">
+			<Original>Tier 4 Radaufhängung</Original>
+		</Key>
+        <Key ID="STR_Item_suspension_T5">
+			<Original>Tier 5 Radaufhängung</Original>
+		</Key>
+        <Key ID="STR_Item_gloves">
+			<Original>Schutzhandschuhe</Original>
+		</Key>
+        <Key ID="STR_NOTF_tuning_found">
+            <Original>Du hast etwas gefunden!</Original>
+        </Key>
+
+        <Key ID="STR_NOTF_airbag">
+            <Original>Airbag</Original>
+        </Key>
+        <Key ID="STR_NOTF_steuergereat">
+            <Original>Steuergerät</Original>
+        </Key>
+        <Key ID="STR_NOTF_waschmaschine">
+            <Original>Waschmaschiene</Original>
+        </Key>
+        <Key ID="STR_NOTF_mikrowelle">
+            <Original>Mikrowelle</Original>
+        </Key>
+        <Key ID="STR_NOTF_benutzteskondom">
+            <Original>Benutztes Kondom</Original>
+        </Key>
+        <Key ID="STR_NOTF_benutzteheroinspritze">
+            <Original>Benutzte Heroin Spritze</Original>
+        </Key>
+        <Key ID="STR_NOTF_computerteile">
+            <Original>Computerteile</Original>
+        </Key>
+        <Key ID="STR_NOTF_pfandflasche">
+            <Original>Pfandflasche</Original>
+        </Key>
+        <Key ID="STR_NOTF_kaputteshandy">
+            <Original>Kaputtes Handy</Original>
         </Key>
     </Package>
 </Project>

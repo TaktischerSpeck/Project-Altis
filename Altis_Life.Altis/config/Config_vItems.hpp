@@ -13,7 +13,7 @@ class VirtualShops {
         name = "STR_Shops_Market";
         side = "civ";
         conditions = "";
-        items[] = { "waterBottle", "rabbit", "apple", "redgull", "tbacon", "pickaxe", "toolkit", "fuelFull", "peach", "storagesmall", "storagebig", "rabbit_raw", "hen_raw", "rooster_raw", "sheep_raw", "goat_raw" };
+        items[] = { "waterBottle", "rabbit", "apple", "redgull", "tbacon", "pickaxe", "toolkit", "fuelFull", "peach", "storagesmall", "storagebig", "rabbit_raw", "hen_raw", "rooster_raw", "sheep_raw", "goat_raw", "gloves" };
     };
 
     class med_market {
@@ -55,7 +55,7 @@ class VirtualShops {
         name = "STR_Shop_Station_Coffee";
         side = "";
         conditions = "";
-        items[] = { "coffee", "donuts", "redgull", "toolkit", "fuelFull"};
+        items[] = { "coffee", "donuts", "redgull", "toolkit", "fuelFull", "gloves"};
     };
 
     class drugdealer {
@@ -126,6 +126,13 @@ class VirtualShops {
         side = "cop";
         conditions = "";
         items[] = { "donuts", "coffee", "spikeStrip", "waterBottle", "rabbit", "apple", "redgull", "toolkit", "fuelFull", "defusekit", "defibrillator" };
+    };
+
+    class scrap {
+        name = "STR_Shops_scrap";
+        side = "";
+        conditions = "";
+        items[] = { "airbag","steuergereat","waschmaschine","mikrowelle","benutzteskondom","benutzteheroinspritze","computerteile","pfandflasche","kaputteshandy" };
     };
 };
 
@@ -919,5 +926,256 @@ class VirtualItems {
         edible = 100;
         drinkable = -1;
         icon = "icons\ico_muttonLeg.paa";
+    };
+
+    class default {
+        icon = "";
+        buyPrice = -1;
+        sellPrice = -1;
+        maxPrice = 2;
+        minPrice = 1;
+        weight = 1;
+        edible = -1;
+        drinkable = -1;
+        illegal = false;
+    };
+    //Tuning
+    //Part Tier 1-5
+    class part_T1: default {
+        variable = "part_T1";
+        displayName = "STR_Item_part_T1";
+        weight = 0;
+        icon = "icons\misc\tuning\part.paa";
+    };
+    class part_T2: default {
+        variable = "part_T2";
+        displayName = "STR_Item_part_T2";
+        weight = 0;
+        icon = "icons\misc\tuning\part.paa";
+    };
+    class part_T3: default {
+        variable = "part_T3";
+        displayName = "STR_Item_part_T3";
+        weight = 0;
+        icon = "icons\misc\tuning\part.paa";
+    };
+    class part_T4: default {
+        variable = "part_T4";
+        displayName = "STR_Item_part_T4";
+        weight = 0;
+        icon = "icons\misc\tuning\part.paa";
+    };
+    class part_T5: default {
+        variable = "part_T5";
+        displayName = "STR_Item_part_T5";
+        weight = 0;
+        icon = "icons\misc\tuning\part.paa";
+    };
+
+    //Engine T1-5
+    class engine_T1: default {
+        variable = "engine_T1";
+        displayName = "STR_Item_engine_T1";
+        weight = 0;
+        icon = "icons\misc\tuning\dialog\engine.paa";
+    };
+    class engine_T2: default {
+        variable = "engine_T2";
+        displayName = "STR_Item_engine_T2";
+        weight = 0;
+        icon = "icons\misc\tuning\dialog\engine.paa";
+    };
+    class engine_T3: default {
+        variable = "engine_T3";
+        displayName = "STR_Item_engine_T3";
+        weight = 0;
+        icon = "icons\misc\tuning\dialog\engine.paa";
+    };
+    class engine_T4: default {
+        variable = "engine_T4";
+        displayName = "STR_Item_engine_T4";
+        weight = 0;
+        icon = "icons\misc\tuning\dialog\engine.paa";
+    };
+    class engine_T5: default {
+        variable = "engine_T5";
+        displayName = "STR_Item_engine_T5";
+        weight = 0;
+        icon = "icons\misc\tuning\dialog\engine.paa";
+    };
+
+    //Transmission T1-5
+    class transmission_T1: default {
+        variable = "transmission_T1";
+        displayName = "STR_Item_transmission_T1";
+        weight = 0;
+        icon = "icons\misc\tuning\dialog\gearbox.paa";
+    };
+    class transmission_T2: default {
+        variable = "transmission_T2";
+        displayName = "STR_Item_transmission_T2";
+        weight = 0;
+        icon = "icons\misc\tuning\dialog\gearbox.paa";
+    };
+    class transmission_T3: default {
+        variable = "transmission_T3";
+        displayName = "STR_Item_transmission_T3";
+        weight = 0;
+        icon = "icons\misc\tuning\dialog\gearbox.paa";
+    };
+    class transmission_T4: default {
+        variable = "transmission_T4";
+        displayName = "STR_Item_transmission_T4";
+        weight = 0;
+        icon = "icons\misc\tuning\dialog\gearbox.paa";
+    };
+    class transmission_T5: default {
+        variable = "transmission_T5";
+        displayName = "STR_Item_transmission_T5";
+        weight = 0;
+        icon = "icons\misc\tuning\dialog\gearbox.paa";
+    };
+
+    //Brakes T1-5
+    class brakes_T1: default {
+        variable = "brakes_T1";
+        displayName = "STR_Item_brakes_T1";
+        weight = 0;
+        icon = "icons\misc\tuning\dialog\brake.paa";
+    };
+    class brakes_T2: default {
+        variable = "brakes_T2";
+        displayName = "STR_Item_brakes_T2";
+        weight = 0;
+        icon = "icons\misc\tuning\dialog\brake.paa";
+    };
+    class brakes_T3: default {
+        variable = "brakes_T3";
+        displayName = "STR_Item_brakes_T3";
+        weight = 0;
+        icon = "icons\misc\tuning\dialog\brake.paa";
+    };
+    class brakes_T4: default {
+        variable = "brakes_T4";
+        displayName = "STR_Item_brakes_T4";
+        weight = 0;
+        icon = "icons\misc\tuning\dialog\brake.paa";
+    };
+    class brakes_T5: default {
+        variable = "brakes_T5";
+        displayName = "STR_Item_brakes_T5";
+        weight = 0;
+        icon = "icons\misc\tuning\dialog\brake.paa";
+    };
+
+    //Suspension T1-5
+    class suspension_T1: default {
+        variable = "suspension_T1";
+        displayName = "STR_Item_suspension_T1";
+        weight = 0;
+        icon = "icons\misc\tuning\dialog\sping.paa";
+    };
+    class suspension_T2: default {
+        variable = "suspension_T2";
+        displayName = "STR_Item_suspension_T2";
+        weight = 0;
+        icon = "icons\misc\tuning\dialog\sping.paa";
+    };
+    class suspension_T3: default {
+        variable = "suspension_T3";
+        displayName = "STR_Item_suspension_T3";
+        weight = 0;
+        icon = "icons\misc\tuning\dialog\sping.paa";
+    };
+    class suspension_T4: default {
+        variable = "suspension_T4";
+        displayName = "STR_Item_suspension_T4";
+        weight = 0;
+        icon = "icons\misc\tuning\dialog\sping.paa";
+    };
+    class suspension_T5: default {
+        variable = "suspension_T5";
+        displayName = "STR_Item_suspension_T5";
+        weight = 0;
+        icon = "icons\misc\tuning\dialog\sping.paa";
+    };
+
+    //SAMMELN
+    class gloves: default {
+        variable = "gloves";
+        displayName = "STR_Item_gloves";
+        weight = 3;
+        buyPrice = 25000;
+        icon = "icons\misc\tuning\gloves.paa";
+    };
+    //
+    class airbag: default {
+        variable = "airbag";
+        displayName = "STR_NOTF_airbag";
+        weight = 2;
+        sellPrice = 2000;
+        icon = "icons\ico_money.paa";
+    };
+
+    class steuergereat: default {
+        variable = "steuergereat";
+        displayName = "STR_NOTF_steuergereat";
+        weight = 2;
+        sellPrice = 200;
+        icon = "icons\ico_money.paa";
+    };
+
+    class waschmaschine: default {
+        variable = "waschmaschiene";
+        displayName = "STR_NOTF_waschmaschine";
+        weight = 5;
+        sellPrice = 800;
+        icon = "icons\ico_money.paa";
+    };
+
+    class mikrowelle: default {
+        variable = "mikrowelle";
+        displayName = "STR_NOTF_mikrowelle";
+        weight = 2;
+        sellPrice = 500;
+        icon = "icons\ico_money.paa";
+    };
+
+    class benutzteskondom: default {
+        variable = "benutzteskondom";
+        displayName = "STR_NOTF_benutzteskondom";
+        sellPrice = 6969;
+        edible = 50;
+        icon = "icons\ico_money.paa";
+    };
+
+    class benutzteheroinspritze: default {
+        variable = "benutztheroinspritze";
+        displayName = "STR_NOTF_benutzteheroinspritze";
+        sellPrice = 1;
+        icon = "icons\ico_money.paa";
+    };
+
+    class computerteile: default {
+        variable = "computerteile";
+        displayName = "STR_NOTF_computerteile";
+        weight = 3;
+        sellPrice = 1337;
+        icon = "icons\ico_money.paa";
+    };
+
+    class pfandflasche: default {
+        variable = "pfandflasche";
+        displayName = "STR_NOTF_pfandflasche";
+        sellPrice = 25;
+        icon = "icons\ico_money.paa";
+    };
+
+    class kaputteshandy: default {
+        variable = "kaputteshandy";
+        displayName = "STR_NOTF_kaputteshandy";
+        weight = 2;
+        sellPrice = 750;
+        icon = "icons\ico_money.paa";
     };
 };

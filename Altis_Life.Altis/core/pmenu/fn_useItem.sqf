@@ -99,6 +99,11 @@ switch (_item) do {
         closeDialog 0;
     };
 
+    case "gloves": {
+        [] spawn life_fnc_gloves;
+        closeDialog 0;
+    };
+
     default {
         hint localize "STR_ISTR_NotUsable";
     };
