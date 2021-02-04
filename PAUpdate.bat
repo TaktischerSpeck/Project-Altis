@@ -15,7 +15,7 @@ del "%dirServer%\@life_server\Addons\life_server.pbo" /f /q
 del "%dirServer%\@life_hc\Addons\life_hc.pbo" /f /q
 "%PBOManager%\PBOConsole.exe" -pack "%dirGit%\life_hc" "%dirServer%\@life_hc\Addons\life_hc.pbo"
 
-del "%dirServer%\Altis_Life.Altis.pbo" /f /q
+del "%dirServer%\mpmissions\Altis_Life.Altis.pbo" /f /q
 "%PBOManager%\PBOConsole.exe" -pack "%dirGit%\Altis_Life.Altis" "%dirServer%\mpmissions\Altis_Life.Altis.pbo"
 
 xcopy "%dirServer%\mpmissions\Altis_Life.Altis.pbo" "%mpspace%\" /y
