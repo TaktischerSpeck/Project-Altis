@@ -115,6 +115,10 @@ class CfgRemoteExec {
         F(TON_fnc_handleBlastingCharge,SERVER)
         F(TON_fnc_houseGarage,SERVER)
 
+        //Tuev
+        F(ton_fnc_gettuev,SERVER)
+        F(ton_fnc_inserttuev,SERVER)
+
         /* HeadlessClient only functions */
         F(HC_fnc_addContainer,HC)
         F(HC_fnc_addHouse,HC)

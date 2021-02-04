@@ -377,4 +377,10 @@ class Life_Client_Core {
         class gloves {};
         class foundsomething {};
 	};
+    class tuev {
+		file = "core\tuning\tuev";
+        class tuevInfo {};
+        class tuevCreateMenu {};
+        class tuevCreate {};
+	};
 };
