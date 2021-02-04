@@ -29,3 +29,5 @@
 #include "FuelStat.hpp"
 #include "newsStation.hpp"
 #include "WinMenu.hpp"
+#include "TuevCreate.hpp"
+#include "TuevInfoMenu.hpp"

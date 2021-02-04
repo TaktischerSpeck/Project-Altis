@@ -112,6 +112,12 @@ class CfgFunctions {
             class setPlayTime {};
             class getPlayTime {};
         };
+
+        class tuev {
+			file = "\life_server\Functions\tuning\tuev";
+			class gettuev {};
+			class inserttuev {};
+		};
     };
 };
 
