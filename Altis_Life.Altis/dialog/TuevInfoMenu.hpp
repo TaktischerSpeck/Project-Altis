@@ -51,7 +51,7 @@ class TuevInfoMenu {
 	idd = ProjectAltis_IDD_TuevInfoMenu;
 
 	class controlsBackground {
-		class mainbackground: RscText {
+		class mainbackground: life_RscText {
 			idc = ProjectAltis_IDC_mainbackground;
 			ProjectAltis_POSITION(470,307,968,475)
 			colorBackground[] = {0,0,0,0.85};
@@ -149,22 +149,22 @@ class TuevInfoMenu {
 		class engine_pic: Life_RscPicture {
 			idc = ProjectAltis_IDC_engine_pic;
 			ProjectAltis_POSITION(520,357,75,75)
-			text = "textures\misc\tuning\dialog\engine.paa";
+			text = "icons\misc\tuning\dialog\engine.paa";
 		};
 		class gearbox_pic: Life_RscPicture {
 			idc = ProjectAltis_IDC_gearbox_pic;
 			ProjectAltis_POSITION(520,457,75,75)
-			text = "textures\misc\tuning\dialog\gearbox.paa";
+			text = "icons\misc\tuning\dialog\gearbox.paa";
 		};
 		class sping_pic: Life_RscPicture {
 			idc = ProjectAltis_IDC_sping_pic;
 			ProjectAltis_POSITION(520,657,75,75)
-			text = "textures\misc\tuning\dialog\sping.paa";
+			text = "icons\misc\tuning\dialog\sping.paa";
 		};
 		class brake_pic: Life_RscPicture {
 			idc = ProjectAltis_IDC_brake_pic;
 			ProjectAltis_POSITION(520,557,75,75)
-			text = "textures\misc\tuning\dialog\brake.paa";
+			text = "icons\misc\tuning\dialog\brake.paa";
 		};
 		class box_checker: life_RscText {
 			idc = ProjectAltis_IDC_box_checker;

@@ -14,7 +14,7 @@ Private _dbInfo = _vehicle getVariable ["dbInfo",[]];
 if (_dbInfo isEqualTo []) exitWith {};
 
 Private _checker = name player;
-Private _vid = _dbInfo select 3;
+Private _vid = _dbInfo select 2;
 Private _dialog = findDisplay 31738;
 Private _info = ctrlText (_dialog displayCtrl 31755);
 Private _active = 1;

@@ -37,7 +37,7 @@
 class TuevCreate {
 	idd = ProjectAltis_IDD_TuevCreate;
 	class controlsBackground {
-		class mainbackground: RscText {
+		class mainbackground: life_RscText {
 			idc = ProjectAltis_IDC_mainbackground;
 			ProjectAltis_POSITION(556,344,808,393)
 			colorBackground[] = {0,0,0,0.85};

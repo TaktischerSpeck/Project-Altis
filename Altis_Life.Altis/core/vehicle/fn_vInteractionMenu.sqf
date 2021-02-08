@@ -160,8 +160,11 @@ if (playerSide isEqualTo west) then {
     _Btn6_Under ctrlShow false;
 };
 
-_Btn7       ctrlShow false;
-_Btn7_Under ctrlShow false;
+//Tüv
+_Btn7 ctrlSetText "TÜV";
+_Btn7 buttonSetAction "closeDialog 0; [((life_vInact_curTarget getVariable ['dbInfo',[]]) select 2)] remoteExecCall ['ton_fnc_gettuev',2];";
+_Btn7_Under buttonSetAction "closeDialog 0; [((life_vInact_curTarget getVariable ['dbInfo',[]]) select 2)] remoteExecCall ['ton_fnc_gettuev',2];";
+
 _Btn8       ctrlShow false;
 _Btn8_Under ctrlShow false;
 _Btn9       ctrlShow false;

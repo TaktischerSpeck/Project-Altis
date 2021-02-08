@@ -104,32 +104,32 @@ _vehicle lock 2;
 //Reskin the vehicle
 [_vehicle,(_vInfo select 8)] remoteExecCall ["life_fnc_colorVehicle",_unit];
 _vehicle setVariable ["vehicle_info_owners",[[_pid,_name]],true];
-_vehicle setVariable ["dbInfo",[(_vInfo select 4),(_vInfo select 7)],true];
+_vehicle setVariable ["dbInfo",[(_vInfo select 4),(_vInfo select 7),(_vInfo select 0)],true];
 _vehicle disableTIEquipment true; //No Thermals.. They're cheap but addictive.
 [_vehicle] call life_fnc_clearVehicleAmmo;
 
 if (LIFE_SETTINGS(getNumber,"save_vehicle_virtualItems") isEqualTo 1) then {
 
     _vehicle setVariable ["Trunk",_trunk,true];
-    
+
     if (_wasIllegal) then {
         private _refPoint = if (_sp isEqualType "") then {getMarkerPos _sp;} else {_sp;};
-        
+
         private _distance = 100000;
         private "_location";
 
         {
             private _tempLocation = nearestLocation [_refPoint, _x];
             private _tempDistance = _refPoint distance _tempLocation;
-    
+
             if (_tempDistance < _distance) then {
                 _location = _tempLocation;
                 _distance = _tempDistance;
             };
             false
-    
+
         } count ["NameCityCapital", "NameCity", "NameVillage"];
- 
+
         _location = text _location;
         [1,"STR_NOTF_BlackListedVehicle",true,[_location,_name]] remoteExecCall ["life_fnc_broadcast",west];
 
