@@ -6,6 +6,8 @@
 #define GUI_GRID_CENTER_H        (GUI_GRID_CENTER_HAbs / 25)
 #define GUI_GRID_CENTER_X        (safezoneX + (safezoneW - GUI_GRID_CENTER_WAbs)/2)
 #define GUI_GRID_CENTER_Y        (safezoneY + (safezoneH - GUI_GRID_CENTER_HAbs)/2)
+#define SCREEN_Y (getResolution select 1)
+#define SIZE(SIZE) (SIZE)/1080*SCREEN_Y*pixelH
 
 class Life_Checkbox
 {
@@ -1161,4 +1163,281 @@ class Life_RscToolbox {
     colorSelectedBg[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
     font = "RobotoCondensed";
     sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
+};
+
+class ProjectAltis_Button {
+    access = 0;
+	type = 1;
+	style = 2;
+	x = 0;
+    y = 0;
+    w = 0;
+    h = 0;
+	text = "";
+	font = "PuristaMedium";
+    size = SIZE(24);
+	sizeEx = SIZE(24);
+	colorText[] = {1,1,1,1};
+    colorFocused[] = {0.0549,0.08235,0.1098,0.75}; //{1,0.647,0,1};
+	colorDisabled[] = {0.502,0.502,0.502,1};
+	colorBackground[] = {0.0549,0.08235,0.1098,0.75};
+	colorBackgroundDisabled[] = {0.0549,0.08235,0.1098,0.75};
+	colorBackgroundActive[] = {0.0549,0.08235,0.1098,0.75}; //{1,0.647,0,1};
+	offsetX = 0;
+	offsetY = 0;
+	offsetPressedX = 0;
+	offsetPressedY = 0;
+	colorShadow[] = {0,0,0,0};
+	shadow = 0;
+	colorBorder[] = {0,0,0,0};
+	borderSize = 0;
+    soundEnter[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundEnter",0.09,0};
+    soundPush[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundPush",0.09,0};
+    soundClick[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundClick",0.09,0};
+    soundEscape[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundEscape",0.09,0};
+    onMouseEnter = "_this#0 ctrlSetTextColor [1,0.647,0,1];";
+    onMouseExit = "_this#0 ctrlSetTextColor [1,1,1,1]";
+};
+
+class ProjectAltis_Button_Close {
+    access = 0;
+	type = 1;
+	style = 2;
+	x = 0;
+    y = 0;
+    w = 0;
+    h = 0;
+	onButtonClick = "closeDialog 0;";
+	text = "Schließen";
+	font = "PuristaMedium";
+    size = SIZE(24);
+	sizeEx = SIZE(24);
+	colorText[] = {1,1,1,1};
+    colorFocused[] = {1,0,0,1}; //{1,0.647,0,1};
+	colorDisabled[] = {0.502,0.502,0.502,1};
+	colorBackground[] = {1,0,0,1};
+	colorBackgroundDisabled[] = {1,0,0,1};
+	colorBackgroundActive[] = {1,0,0,1}; //{1,0.647,0,1};
+	offsetX = 0;
+	offsetY = 0;
+	offsetPressedX = 0;
+	offsetPressedY = 0;
+	colorShadow[] = {0,0,0,0};
+	shadow = 0;
+	colorBorder[] = {0,0,0,0};
+	borderSize = 0;
+    soundEnter[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundEnter",0.09,0};
+    soundPush[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundPush",0.09,0};
+    soundClick[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundClick",0.09,0};
+    soundEscape[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundEscape",0.09,0};
+    onMouseEnter = "_this#0 ctrlSetTextColor [1,0.647,0,1];";
+    onMouseExit = "_this#0 ctrlSetTextColor [1,1,1,1]";
+};
+
+class ProjectAltis_Button_Under {
+    access = 0;
+	type = 1;
+	style = 2;
+	x = 0;
+    y = 0;
+    w = 0;
+    h = 0;
+	text = "";
+	font = "PuristaMedium";
+    size = SIZE(24);
+	sizeEx = SIZE(24);
+	colorText[] = {0,0,0,0};
+    colorFocused[] = {0.1451,0.54118,0.81176,1};
+	colorDisabled[] = {0.1451,0.54118,0.81176,1};
+	colorBackground[] = {0.1451,0.54118,0.81176,1};
+	colorBackgroundDisabled[] = {0.1451,0.54118,0.81176,1};
+	colorBackgroundActive[] = {0.1451,0.54118,0.81176,1};
+	offsetX = 0;
+	offsetY = 0;
+	offsetPressedX = 0;
+	offsetPressedY = 0;
+	colorShadow[] = {0,0,0,0};
+	shadow = 0;
+	colorBorder[] = {0,0,0,0};
+	borderSize = 0;
+    soundEnter[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundEnter",0.09,0};
+    soundPush[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundPush",0.09,0};
+    soundClick[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundClick",0.09,0};
+    soundEscape[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundEscape",0.09,0};
+    onMouseEnter = "_this#0 ctrlSetTextColor [1,0.647,0,1];";
+    onMouseExit = "_this#0 ctrlSetTextColor [1,1,1,1]";
+};
+
+class ProjectAltis_Button_Close_Under {
+    access = 0;
+	type = 1;
+	style = 2;
+	x = 0;
+    y = 0;
+    w = 0;
+    h = 0;
+	onButtonClick = "closeDialog 0;";
+    text="";
+	font = "PuristaMedium";
+    size = SIZE(24);
+	sizeEx = SIZE(24);
+	colorText[] = {0,0,0,0};
+    colorFocused[] = {0.1451,0.54118,0.81176,1};
+	colorDisabled[] = {0.1451,0.54118,0.81176,1};
+	colorBackground[] = {0.1451,0.54118,0.81176,1};
+	colorBackgroundDisabled[] = {0.1451,0.54118,0.81176,1};
+	colorBackgroundActive[] = {0.1451,0.54118,0.81176,1};
+	offsetX = 0;
+	offsetY = 0;
+	offsetPressedX = 0;
+	offsetPressedY = 0;
+	colorShadow[] = {0,0,0,0};
+	shadow = 0;
+	colorBorder[] = {0,0,0,0};
+	borderSize = 0;
+    soundEnter[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundEnter",0.09,0};
+    soundPush[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundPush",0.09,0};
+    soundClick[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundClick",0.09,0};
+    soundEscape[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundEscape",0.09,0};
+    onMouseEnter = "_this#0 ctrlSetTextColor [1,0.647,0,1];";
+    onMouseExit = "_this#0 ctrlSetTextColor [1,1,1,1]";
+};
+
+class ProjectAltis_Button_Bus {
+    access = 0;
+	type = 1;
+	style = 2;
+	x = 0;
+    y = 0;
+    w = 0;
+    h = 0;
+	text = "";
+	font = "PuristaMedium";
+    size = SIZE(28);
+    sizeEx = SIZE(28);
+	colorText[] = {1,1,1,1};
+    colorFocused[] = {0,0,0,0};
+    colorDisabled[] = {0,0,0,0};
+    colorBackground[] = {0,0,0,0};
+    colorBackgroundDisabled[] = {0,0,0,0};
+    colorBackgroundActive[] = {0,0,0,0};
+	offsetX = 0;
+	offsetY = 0;
+	offsetPressedX = 0;
+	offsetPressedY = 0;
+	colorShadow[] = {0,0,0,0};
+	shadow = 0;
+	colorBorder[] = {0,0,0,0};
+	borderSize = 0;
+    soundEnter[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundEnter",0.09,0};
+    soundPush[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundPush",0.09,0};
+    soundClick[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundClick",0.09,0};
+    soundEscape[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundEscape",0.09,0};
+    onMouseEnter = "_this#0 ctrlSetTextColor [1,0.647,0,1];";
+    onMouseExit = "_this#0 ctrlSetTextColor [1,1,1,1]";
+};
+
+class ProjectAltis_RscStructuredText {
+    type = 13;
+    style = 0;
+    x = 0;
+    y = 0;
+    h = 0;
+    w = 0;
+    text = "";
+    size = SIZE(24);
+	sizeEx = SIZE(24);
+    colorText[] = {1, 1, 1, 1};
+    color[] = {1, 1, 1, 1};
+    shadow = 0;
+
+    class Attributes {
+        align = "left";
+    };
+};
+
+class ProjectAltis_RscListBox {
+    style = 16;
+    idc = -1;
+    type = 5;
+    w = 0.275;
+    h = 0.04;
+    font = "PuristaMedium";
+    colorSelect[] = {1,0.647,0,1};
+    colorText[] = {1, 1, 1, 1};
+    colorBackground[] = {0.28,0.28,0.28,0.28};
+    colorSelect2[] = {1,0.647,0,1};
+    colorSelectBackground[] = {0.95, 0.95, 0.95, 0.25};
+    colorSelectBackground2[] = {1, 1, 1, 0.25};
+    colorScrollbar[] = {0.2, 0.2, 0.2, 1};
+    colorPicture[] = {1,1,1,1};
+    colorPictureSelected[] = {1,1,1,1};
+    colorPictureDisabled[] = {1,1,1,1};
+    arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
+    arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
+    rowHeight = SIZE(24);
+    color[] = {0.7, 0.7, 0.7, 1};
+    colorActive[] = {0,0,0,1};
+    colorDisabled[] = {0,0,0,0.3};
+	sizeEx = SIZE(22);
+    soundSelect[] = {"",0.1,1};
+    soundExpand[] = {"",0.1,1};
+    soundCollapse[] = {"",0.1,1};
+    maxHistoryDelay = 1;
+    autoScrollSpeed = -1;
+    autoScrollDelay = 5;
+    autoScrollRewind = 0;
+    tooltipColorText[] = {1,1,1,1};
+    tooltipColorBox[] = {1,1,1,1};
+    tooltipColorShade[] = {0,0,0,0.65};
+    class ListScrollBar: Life_RscScrollBar {
+        color[] = {1,1,1,1};
+        autoScrollEnabled = 1;
+    };
+};
+
+class ProjectAltis_RscListNBox {
+    style = 16;
+    type = 102;
+    shadow = 0;
+    font = "PuristaMedium";
+    sizeEx = SIZE(24);
+    color[] = {0.95,0.95,0.95,1};
+    colorText[] = {1,1,1,1.0};
+    colorDisabled[] = {1,1,1,0.25};
+    colorScrollbar[] = {0.95,0.95,0.95,1};
+    colorSelect[] = {1,0.647,0,1};
+    colorSelect2[] = {1,0.647,0,1};
+    colorSelectBackground[] = {0.8,0.8,0.8,0.25};
+    colorSelectBackground2[] = {1,1,1,0.25};
+    colorPicture[] = {1,1,1,1};
+    colorPictureSelected[] = {1,1,1,1};
+        colorPictureDisabled[] = {1,1,1,1};
+    soundSelect[] = {"",0.1,1};
+    soundExpand[] = {"",0.1,1};
+    soundCollapse[] = {"",0.1,1};
+    period = 1.2;
+    maxHistoryDelay = 0.5;
+    autoScrollSpeed = -1;
+    autoScrollDelay = 5;
+    autoScrollRewind = 0;
+    class ListScrollBar: Life_RscScrollBar{};
+    class ScrollBar: Life_RscScrollBar{};
+};
+
+class ProjectAltis_RscEdit {
+    type = 2;
+    style = 0x00 + 0x40;
+    font = "PuristaMedium";
+    shadow = 0;
+    text="";
+    sizeEx = SIZE(24);
+    colorBackground[] = {1, 1, 1, 1};
+    soundSelect[] = {"",0.1,1};
+    soundExpand[] = {"",0.1,1};
+    colorText[] = {0.95, 0.95, 0.95, 1};
+    colorDisabled[] = {1, 1, 1, 0.25};
+    autocomplete = false;
+    colorSelection[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 1};
+    canModify = 1;
 };
