@@ -374,6 +374,10 @@ class Life_Client_Core {
 
     class Tuning {
 		file = "core\tuning";
+        class initTuning {};
+        class boost {};
+        class TuningShop {};
+        class TuningUpgrade {};
         class gloves {};
         class foundsomething {};
 	};

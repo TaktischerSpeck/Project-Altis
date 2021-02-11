@@ -33,7 +33,7 @@ if (_vid in serv_sv_use) exitWith {};
 serv_sv_use pushBack _vid;
 private _servIndex = serv_sv_use find _vid;
 
-private _query = format ["SELECT id, side, classname, type, pid, alive, active, plate, color, inventory, gear, fuel, damage, blacklist FROM vehicles WHERE id='%1' AND pid='%2'",_vid,_pid];
+private _query = format ["SELECT id, side, classname, type, pid, alive, active, plate, color, inventory, gear, fuel, damage, blacklist, tuned FROM vehicles WHERE id='%1' AND pid='%2'",_vid,_pid];
 
 private _tickTime = diag_tickTime;
 private _queryResult = [_query,2] call HC_fnc_asyncCall;
@@ -118,31 +118,31 @@ _vehicle disableTIEquipment true; //No Thermals.. They're cheap but addictive.
 if (LIFE_SETTINGS(getNumber,"save_vehicle_virtualItems") isEqualTo 1) then {
 
     _vehicle setVariable ["Trunk",_trunk,true];
-    
+
     if (_wasIllegal) then {
         private _refPoint = if (_sp isEqualType "") then {getMarkerPos _sp;} else {_sp;};
-        
+
         private _distance = 100000;
         private "_location";
 
         {
             private _tempLocation = nearestLocation [_refPoint, _x];
             private _tempDistance = _refPoint distance _tempLocation;
-    
+
             if (_tempDistance < _distance) then {
                 _location = _tempLocation;
                 _distance = _tempDistance;
             };
             false
-    
+
         } count ["NameCityCapital", "NameCity", "NameVillage"];
- 
+
         _location = text _location;
         [1,"STR_NOTF_BlackListedVehicle",true,[_location,_name]] remoteExecCall ["life_fnc_broadcast",west];
 
         _query = format ["UPDATE vehicles SET blacklist='0' WHERE id='%1' AND pid='%2'",_vid,_pid];
-        [_query,1] call HC_fnc_asyncCall; 
-    };   
+        [_query,1] call HC_fnc_asyncCall;
+    };
 } else {
     _vehicle setVariable ["Trunk",[[],0],true];
 };
@@ -192,6 +192,16 @@ if ((_vInfo select 1) isEqualTo "cop" && ((_vInfo select 2)) in ["C_Offroad_01_F
 
 if ((_vInfo select 1) isEqualTo "med" && ((_vInfo select 2)) isEqualTo "C_Offroad_01_F") then {
     [_vehicle,"med_offroad",true] remoteExecCall ["life_fnc_vehicleAnimate",_unit];
+};
+
+if ((_vInfo select 14) isEqualTo 1) then {
+
+    private _query_tuning = format ["SELECT engine, transmission, brakes, springs FROM vehicles WHERE id='%1' AND pid='%2'",_vid,_pid];
+    private _tuning_data = [_query_tuning,2] call HC_fnc_asyncCall;
+
+                //engine                //Transmission          //Brakes                   //springs
+    [_vehicle,(_tuning_data select 0),(_tuning_data select 1),(_tuning_data select 2),(_tuning_data select 3)]
+    remoteExecCall ["life_fnc_initTuning",_unit];
 };
 
 [1,_spawntext] remoteExecCall ["life_fnc_broadcast",_unit];

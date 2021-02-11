@@ -28,7 +28,7 @@ serv_sv_use pushBack _vid;
 
 private _servIndex = serv_sv_use find _vid;
 
-private _query = format ["SELECT id, side, classname, type, pid, alive, active, plate, color, inventory, gear, fuel, damage, blacklist FROM vehicles WHERE id='%1' AND pid='%2'",_vid,_pid];
+private _query = format ["SELECT id, side, classname, type, pid, alive, active, plate, color, inventory, gear, fuel, damage, blacklist, tuned FROM vehicles WHERE id='%1' AND pid='%2'",_vid,_pid];
 
 private _tickTime = diag_tickTime;
 private _queryResult = [_query,2] call DB_fnc_asyncCall;
@@ -185,6 +185,16 @@ if ((_vInfo select 1) isEqualTo "cop" && ((_vInfo select 2)) in ["C_Offroad_01_F
 
 if ((_vInfo select 1) isEqualTo "med" && (_vInfo select 2) isEqualTo "C_Offroad_01_F") then {
     [_vehicle,"med_offroad",true] remoteExecCall ["life_fnc_vehicleAnimate",_unit];
+};
+
+if ((_vInfo select 14) isEqualTo 1) then {
+
+    private _query_tuning = format ["SELECT engine, transmission, brakes, springs FROM vehicles WHERE id='%1' AND pid='%2'",_vid,_pid];
+    private _tuning_data = [_query_tuning,2] call DB_fnc_asyncCall;
+
+                //engine                //Transmission          //Brakes                   //springs
+    [_vehicle,(_tuning_data select 0),(_tuning_data select 1),(_tuning_data select 2),(_tuning_data select 3)]
+    remoteExecCall ["life_fnc_initTuning",_unit];
 };
 
 [1,_spawntext] remoteExecCall ["life_fnc_broadcast",_unit];

@@ -31,3 +31,4 @@
 #include "WinMenu.hpp"
 #include "TuevCreate.hpp"
 #include "TuevInfoMenu.hpp"
+#include "TuningShop.hpp"

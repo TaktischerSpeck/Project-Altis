@@ -37,13 +37,13 @@ if (playerSide isEqualTo civilian) then {
 };
 
 if !(playerSide isEqualTo west) then {
-	Private _stage = str (_vehicle getvariable ["gtqu6u2m_initboostMulti_Stage",0]);
+	Private _stage = str (_vehicle getvariable ["pa_initboostMulti_Stage",0]);
 	CONTROL(39949,39953) ctrlSetStructuredText parseText _stage; //engine
-	_stage = str (_vehicle getvariable ["gtqu6u2m_initmaxSpeedMulti_Stage",0]);
+	_stage = str (_vehicle getvariable ["pa_initmaxSpeedMulti_Stage",0]);
 	CONTROL(39949,39954) ctrlSetStructuredText parseText _stage; //gerbox
-	_stage = str (_vehicle getvariable ["gtqu6u2m_initbrakes_Stage",0]);
+	_stage = str (_vehicle getvariable ["pa_initbrakes_Stage",0]);
 	CONTROL(39949,39955) ctrlSetStructuredText parseText _stage; //brake
-	_stage = str (_vehicle getvariable ["gtqu6u2m_initsprings_Stage",0]);
+	_stage = str (_vehicle getvariable ["pa_initsprings_Stage",0]);
 	CONTROL(39949,39956) ctrlSetStructuredText parseText _stage; //spring
 };
 

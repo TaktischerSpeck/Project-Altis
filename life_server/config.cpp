@@ -113,6 +113,11 @@ class CfgFunctions {
             class getPlayTime {};
         };
 
+        class tuning {
+			file = "\life_server\Functions\tuning";
+			class TuningUpgrade {};
+		};
+
         class tuev {
 			file = "\life_server\Functions\tuning\tuev";
 			class gettuev {};
